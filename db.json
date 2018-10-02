@@ -6,21 +6,21 @@
         "download_speed": 50,
         "upload_speed": 6,
         "benefits": [
-          "test",
-          "test",
-          "test"
+          "Perfect speed",
+          "Credit card support",
+          "Unlimited gaming"
         ],
         "price": 12.5
       },
       {
         "id": 2,
         "name": "Medium",
-        "download_speed": 70,
-        "upload_speed": 8,
+        "download_speed": 20,
+        "upload_speed": 28,
         "benefits": [
-          "test",
-          "test",
-          "test"
+          "Social networks at nigth",
+          "Good choice",
+          "Prepaid cards"
         ],
         "price": 23.5
       },
@@ -30,21 +30,21 @@
         "download_speed": 100,
         "upload_speed": 12,
         "benefits": [
-          "test",
-          "test",
-          "test"
+          "Benefit large",
+          "Promo benefit!",
+          "Listen to music"
         ],
         "price": 55.5
       },
       {
         "id": 4,
         "name": "Extra Large",
-        "download_speed": 150,
-        "upload_speed": 20,
+        "download_speed": 70,
+        "upload_speed": 70,
         "benefits": [
-          "test",
-          "test",
-          "test"
+          "Watch films",
+          "Play games",
+          "Try it!"
         ],
         "price": 70.5
       }
