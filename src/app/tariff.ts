@@ -5,4 +5,8 @@ export class Tariff {
   upload_speed: number;
   benefits: Array<string>;
   price: number;
+
+  constructor(values: Object = {}) {
+    Object.assign(this, values);
+  }
 }
