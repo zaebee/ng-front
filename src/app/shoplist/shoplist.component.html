@@ -2,14 +2,23 @@
   <div class="col-md-12">
     Sort by:
     <div class="btn-group" role="group" aria-label="Basic example">
-      <button type="button" class="btn btn-secondary">Download speed</button>
-      <button type="button" class="btn btn-secondary">Upload speed</button>
-      <button type="button" class="btn btn-secondary">Price</button>
+      <button (click)="sort('download_speed')" type="button" class="btn btn-secondary">
+        Download speed
+        <span class="fas fa-sort" *ngIf="key =='download_speed'" [ngClass]="{'fa-sort-up':reverse,'fa-sort-down':!reverse}"></span>
+      </button>
+      <button (click)="sort('upload_speed')" type="button" class="btn btn-secondary">
+        Upload speed
+        <span class="fas fa-sort" *ngIf="key =='upload_speed'" [ngClass]="{'fa-sort-up':reverse,'fa-sort-down':!reverse}"></span>
+      </button>
+      <button (click)="sort('price')" type="button" class="btn btn-secondary">
+        Price
+        <span class="fas fa-sort" *ngIf="key =='price'" [ngClass]="{'fa-sort-up':reverse,'fa-sort-down':!reverse}"></span>
+      </button>
     </div>
   </div>
 </div>
 
-<div *ngFor="let tariff of tariffs" class="card mb-4 shadow-sm">
+<div *ngFor="let tariff of tariffs | orderBy: key: reverse" class="card mb-4 shadow-sm">
   <div class="card-body">
     <div class="row">
       <div class="col-lg-3 col-md-3 col-4">

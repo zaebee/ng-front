@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 
 import { TariffDataService } from './tariff-data.service';
 import { ApiService } from './api.service';
+import { OrderByPipe } from './order-by.pipe';
 
 import { ShoplistComponent } from './shoplist/shoplist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ShoplistComponent
+    ShoplistComponent,
+    OrderByPipe
   ],
   imports: [
     BrowserModule,

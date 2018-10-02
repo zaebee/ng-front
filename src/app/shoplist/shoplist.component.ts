@@ -6,12 +6,14 @@ import { TariffDataService } from '../tariff-data.service';
   selector: 'app-shoplist',
   templateUrl: './shoplist.component.html',
   styleUrls: ['./shoplist.component.css'],
-  providers: [TariffDataService]
+  providers: [TariffDataService],
 })
 export class ShoplistComponent implements OnInit {
 
   tariffs: Tariff[] = [];
   selectedTariff: Tariff;
+  key: string = 'name'; //set default
+  reverse: boolean = false;
 
   constructor(
     private tariffDataService: TariffDataService
@@ -25,6 +27,11 @@ export class ShoplistComponent implements OnInit {
           this.tariffs = tariffs;
         }
       );
+  }
+
+  sort(key){
+    this.key = key;
+    this.reverse = !this.reverse;
   }
 
   onSelect(tariff: Tariff): void {
